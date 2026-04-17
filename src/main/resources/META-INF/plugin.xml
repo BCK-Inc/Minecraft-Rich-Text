@@ -13,7 +13,15 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
     <description><![CDATA[
-        Hight light minecraft color<br>
+        Affiche et surligne en temps réel les codes de couleur Minecraft dans l'éditeur IntelliJ.
+        Prend en charge :
+        - Codes legacy : §x, §1–§f, &1–&f
+        - Legacy hex : séquences §x§R§R§G§G§B§B
+        - Hex standard : #RRGGBB
+        Le plugin applique la couleur et les styles (gras, italique, souligné, barré) au texte,
+        et colore aussi les séquences de contrôle elles-mêmes pour une lecture plus rapide.
+        Utilisation : ouvrez la Tool Window « Minecraft Rich Text » ou installez le plugin puis
+        cliquez sur « Appliquer dans l'éditeur » pour activer le surlignage en direct.
     ]]></description>
 
     <!-- Product and plugin compatibility requirements.
@@ -26,7 +34,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow id="MyToolWindow" factoryClass="fr.bckinc.minecraftrichtext.MyToolWindowFactory"
                     icon="AllIcons.Toolwindows.ToolWindowPalette"/>
-        <annotator language="ANY" implementationClass="fr.bckinc.minecraftrichtext.MinecraftColorAnnotator"/>
-        <applicationConfigurable instance="fr.bckinc.minecraftrichtext.MinecraftSettingsConfigurable" displayName="Minecraft Rich Text" key="minecraft.rich.text"/>
+        <!-- Annotator removed from plugin.xml: it can be registered programmatically or with a specific language id if needed -->
+        <applicationConfigurable instance="fr.bckinc.minecraftrichtext.MinecraftSettingsConfigurable" displayName="%minecraft.rich.text" key="minecraft.rich.text"/>
     </extensions>
 </idea-plugin>
