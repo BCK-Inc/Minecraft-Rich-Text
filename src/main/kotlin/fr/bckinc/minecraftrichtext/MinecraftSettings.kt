@@ -5,7 +5,9 @@ import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.State
 import com.intellij.openapi.components.Storage
 import com.intellij.util.xmlb.XmlSerializerUtil
+import com.intellij.openapi.components.Service
 
+@Service(Service.Level.APP)
 @State(name = "MinecraftRichTextSettings", storages = [Storage("minecraft-rich-text.xml")])
 class MinecraftSettings : PersistentStateComponent<MinecraftSettings.State> {
     data class State(var enabled: Boolean = true)

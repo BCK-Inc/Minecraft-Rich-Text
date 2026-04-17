@@ -27,9 +27,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow id="MyToolWindow" factoryClass="fr.bckinc.minecraftrichtext.MyToolWindowFactory"
                     icon="AllIcons.Toolwindows.ToolWindowPalette"/>
-        <annotator language="TEXT" implementationClass="fr.bckinc.minecraftrichtext.MinecraftColorAnnotator"/>
+        <annotator language="ANY" implementationClass="fr.bckinc.minecraftrichtext.MinecraftColorAnnotator"/>
         <applicationConfigurable instance="fr.bckinc.minecraftrichtext.MinecraftSettingsConfigurable" displayName="Minecraft Rich Text" key="minecraft.rich.text"/>
     </extensions>
-    <!-- Register application service for persistent settings -->
-    <applicationService serviceImplementation="fr.bckinc.minecraftrichtext.MinecraftSettings"/>
 </idea-plugin>
