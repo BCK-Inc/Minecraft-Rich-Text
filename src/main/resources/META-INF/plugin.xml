@@ -13,15 +13,8 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
     <description><![CDATA[
-        Affiche et surligne en temps réel les codes de couleur Minecraft dans l'éditeur IntelliJ.
-        Prend en charge :
-        - Codes legacy : §x, §1–§f, &1–&f
-        - Legacy hex : séquences §x§R§R§G§G§B§B
-        - Hex standard : #RRGGBB
-        Le plugin applique la couleur et les styles (gras, italique, souligné, barré) au texte,
-        et colore aussi les séquences de contrôle elles-mêmes pour une lecture plus rapide.
-        Utilisation : ouvrez la Tool Window « Minecraft Rich Text » ou installez le plugin puis
-        cliquez sur « Appliquer dans l'éditeur » pour activer le surlignage en direct.
+        Minecraft Rich Text colore et applique en temps réel les codes de couleur et de style
+        Minecraft (§, &, §x…, #RRGGBB), facilitant l'édition et la lecture des messages colorés.
     ]]></description>
 
     <!-- Product and plugin compatibility requirements.
